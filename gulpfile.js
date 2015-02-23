@@ -12,7 +12,14 @@ var headerfootergen = require('gulp-header-footer-gen');
 var browserSync = require('browser-sync');
 var runSequence = require('run-sequence');
 var minifyHTML = require('gulp-minify-html');
+var shell = require('gulp-shell');
 var server;
+
+console.log(shell);
+
+gulp.task('exampleBat', shell.task([
+    'syncer.bat'
+]));
 
 gulp.task('headerFooterGan', function () {
 
